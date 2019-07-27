@@ -1,0 +1,15 @@
+{
+    "token":"NTUxMDYzOTExOTgyNDMyMjU2.D1rlWA.dy4CiC2-KcrHEHVTp34UR9W6zqw",
+    "prefix":"=",
+    "commands":[
+        "ping",
+        "help",
+        "join",
+        "leave",
+        "play",
+        "queue",
+        "skip",
+        "pause",
+        "resume"
+    ]
+}
