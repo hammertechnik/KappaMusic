@@ -1,7 +1,9 @@
-//@ts-check
+// @ts-check
 "use strict"
 
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (message.member.voiceChannel) {//commander is in voiceChannel
         if (!message.member.voiceChannel.full) {//commander's voiceChannel is not full
             if (!message.guild.voiceConnection) {//I'm not in voiceChannel
