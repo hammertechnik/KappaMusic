@@ -1,6 +1,8 @@
-//@ts-check
+// @ts-check
 "use strict"
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (message.member.voiceChannel) {//commander is in voiceChannel
         if (message.guild.voiceConnection) {//I'm in this voiceChannel
             if (message.member.voiceChannel.id === message.guild.voiceConnection.channel.id) {//ids of my Voicechannel and commander's one are same -> we are in the same voiceChannel
