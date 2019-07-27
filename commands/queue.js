@@ -1,8 +1,10 @@
-//@ts-check
+// @ts-check
 "use strict"
 const YTDL = require("ytdl-core");
 
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (!global.servers[message.guild.id]) {//If this server isn't in my server list, I'll add it
         global.servers[message.guild.id] = { queue: [String] }//And create queue for it
     }
