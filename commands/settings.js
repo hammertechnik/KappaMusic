@@ -1,4 +1,6 @@
-module.exports.run = async (client, message, args, prefix) =>
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
 {
     const fs = require('fs');
     const configFile = require("../storage/config.json");
