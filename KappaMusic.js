@@ -39,12 +39,13 @@ client.on("message", async message => {
         message.reply("msgContent: " + msgContent);
     */
 
+ client.prefix = prefix
 
     try {
         for (const command of config.commands) {//loop through all allowed commands in config file and try to find the right one
             if (command == cmd) {
                 let commandFile = require(`./commands/${cmd}.js`);
-                commandFile.run(client, message, args, prefix);
+                commandFile.run(client, message, args);
             }
         }
     }
