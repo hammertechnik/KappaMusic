@@ -1,4 +1,6 @@
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (message.member.voiceChannel) {//commander is in voiceChannel
         if (message.guild.voiceConnection) {//I'm in voiceChannel
             if (message.member.voiceChannel.id === message.guild.voiceConnection.channel.id) {//IDs of my Voicechannel and commander's one are same -> we are in the same voiceChannel
