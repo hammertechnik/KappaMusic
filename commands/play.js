@@ -23,7 +23,9 @@ function Play(connection, message) {
     });
 }
 
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (message.member.voiceChannel) {//commander is in voiceChannel
         if (typeof args[0] == "undefined") {
             message.channel.send("It looks like you forgot URL of YouTube video to play!");
