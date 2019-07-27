@@ -1,4 +1,6 @@
-module.exports.run = async (client, message, args, prefix) =>
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
 {   
     let mentionedUser = message.mentions.users.first();
     let supliedReason = args.slice(1).join(" ") || "";
