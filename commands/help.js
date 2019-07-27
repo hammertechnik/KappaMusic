@@ -1,4 +1,6 @@
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     if (typeof args[0] != "undefined") {
         try {
             let fileToShowHelpOn = require(`./${args[0].toLowerCase()}.js`);
