@@ -1,7 +1,9 @@
-module.exports.run = async (client, message, args, prefix) => {
+module.exports.run = async (client, message, args) => {
+    const prefix = client.prefix
+    
     message.channel.send("Pinging...")
         .then((msg) => {
-            msg.edit("Ping: " + (Date.now() - msg.createdTimestamp) + "ms")
+            msg.edit("Ping: " + (msg.createdTimestamp - message.createdTimestamp) + "ms")
         });
 }
 
